@@ -21,11 +21,13 @@ namespace EmployeeManagment.Controllers
             var model = _employeeRepository.GetAllEmployee();
             return View(model);
         }
-        public ViewResult Details(int id)
+        public ViewResult Details(int Id)
+     
         {
             HomeDetailsViewModels homeDetailsViewModels = new HomeDetailsViewModels()
             {
-                Employee = _employeeRepository.GetEmployee(id),
+
+                Employee = _employeeRepository.GetEmployee(Id),
                 PageTitle = "Employee Details"
             };
 
